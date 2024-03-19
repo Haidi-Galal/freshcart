@@ -1,0 +1,21 @@
+
+<section  class="bg-light shadow w-75 m-auto my-5 rounded  " >
+    <h1 class="text-success text-center">Orders</h1>
+
+  <div class="row  text-center   " *ngFor="let item of data; let i=index" >
+
+    <div class="col-md-6">
+     <p class="text-success "> {{item.totalOrderPrice |currency:'EUR'}}</p>
+    </div>
+    <div class="col-md-6">
+        <p [ngClass]=" {'text-success':item.paymentMethodType=='cash',
+        'text-danger':item.paymentMethodType=='card'
+    
+    }"> {{item.paymentMethodType}} </p>
+           
+          
+
+  </div>
+
+  </div>
+</section>

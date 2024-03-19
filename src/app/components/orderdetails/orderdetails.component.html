@@ -1,0 +1,22 @@
+
+
+<section class="bg-light  rounded  shadow w-75 m-auto p-4 my-4  ">
+  <h1>Checkout <span class="text-success">Session</span></h1>
+  <form [formGroup]="orederDetails" (ngSubmit)="checkOut()">
+    <div>
+    <label for="details">Details</label>
+    <textarea formControlName="details" name="details" id="details" cols="30" rows="3" class="form-control my-1 "></textarea>
+    </div>
+    <div>
+        <label for="phone">Phone</label>
+        <input formControlName="phone" type="tel" name="phone" id="phone" class="form-control my-1 ">
+        </div>
+        <div>
+            <label for="city">City</label>
+            <input formControlName="city" type="text" name="city" id="city" class="form-control my-1 ">
+            </div>
+        <div class="d-flex justify-content-end ">
+            <button class="btn btn-main">CheckOut</button>
+        </div>
+  </form>
+</section>
